@@ -1,0 +1,72 @@
+C programm to demostrate dynamic memory allocation 
+
+1.C Dynamic Memory Allocation can be defined as a procedure in which the size of a data structure (like Array) is changed during the runtime.
+“malloc” or “memory allocation” method in C is used to dynamically allocate a single large block of memory with the specified size and intialize with garbage value 
+    syntax and ex : int *P = (int *)malloc(4*sizeof(int));
+     assume sizeof int as 4,then it allocates "16BYTES" of memory space to pointer holds the base address  of first byte 
+
+here is a simple c programm 
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int *p;
+    int n=4;
+    p=(int *)malloc(n*(sizeof(int)));
+   //here a large 16BYTES of memory block is allocated to pointer and holds first byte address//
+    
+    if(p==NULL)
+    {
+        printf("memory space not allocated ");
+        
+    }
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&p[i]);
+    }
+    
+    for(int i=0;i<n;i++)
+    {
+        printf("%d",p[i]);
+    }
+    return 0;
+}
+
+2.calloc 
+it is contiguous allocation method ,it allocates memory dynamically with specifed no of blocks 
+it intializes with 0 ;
+it takes two arguments 
+syntax : int *p=(int *)calloc(n,sizeofelement);
+here n=nof elements;
+sizeofelement= size of elemnt for each block;
+ex int*p=(int *)calloc(4,sizeof(int)):
+it allocates space in memory for 4 elemts with sizeof int bytes 
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int *p;
+    int n=4;
+    p=(int *)calloc(5,sizeof(int));
+   
+    
+    if(p==NULL)
+    {
+        printf("memory space not allocated ");
+        
+    }
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&p[i]);
+    }
+    
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",p[i]);
+    }
+    return 0;
+}
+
+
+
