@@ -1,0 +1,84 @@
+1.Reversing game ;
+2.// c program to count length of a last word of a sentence//
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+"c programm to reverse a number"
+#include <stdio.h>
+ 
+int main()
+{
+    int n=65461;
+    int rev=0;
+    while(n>0)
+    {
+        rev=rev*10+n%10;
+        n=n/10;
+    }
+    printf("%d",rev);
+    return 0;
+}
+
+"c programm to reverse array using pointer "
+#include <stdio.h>
+ 
+int main()
+{
+    int a[]={3,4,5,6,7};
+    int n=5;
+    int *p;
+    p=&a[n-1];
+    for(int i=0;i<n;i++)
+    {
+        printf("%d",*p--);
+    }
+ 
+    return 0;
+}
+"c programm to reverse a string  "
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[]="codeforcarrier";
+    int len = strlen(str);
+    for(int i=len;i>0;i--)
+    {
+        printf("%c",str[i]);
+    }
+    return 0;
+}
+//////////////////////////////////////////////////////////////////////////
+
+
+// c program to count length of a last word of a sentence//
+#include <stdio.h>
+#include <string.h>
+// cprogramm to count the length of last word in a sentence
+int main()
+{
+    int count,c2=0;
+    char sen[]="hello how are you india";
+     int len=strlen(sen);
+    for(int i=0;sen[i]!='\0';i++)
+    {
+        count++;
+    }
+    printf("\ntotal sentence length %d",count);
+    for(int i=0;i<len;i++)
+    {
+     if(sen[i]==' ')
+     {
+      c2=0;
+     }
+     else
+     {
+      c2++;
+     }
+    }
+    printf("\n len of last word %d",c2);
+
+ 
+    return 0;
+}
