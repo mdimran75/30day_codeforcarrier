@@ -1,0 +1,47 @@
+//atoi function
+#include<stdio.h>
+int myatoi(char *str);
+ 
+int main()
+{
+    char c[]="1234";
+    char d[]="5678";
+   // printf("%c",c);
+   int res=myatoi(c);
+   int new=myatoi(d);
+   printf("%d",res+new);
+}
+int myatoi(char *str)
+{
+    int res1=0;
+    for(int i=0;str[i]!='\0';i++)
+    {
+       res1=res1*10+str[i]-'0'; // taking the charcater and doing sub with charcter 0(zer0)
+                               // doing sub with charcter 0(zero ) will give that differnee only 
+    }
+    return res1;
+}
+
+
+// c program to find non repating char in a string
+#include <stdio.h>
+#include <string.h>
+// non repeating char in string
+int main()
+{
+    char str[]="hhellooe";
+    int buffer[256]={0};
+    for(int i=0;i<strlen(str);i++)
+    {
+      buffer[str[i]]++;
+    }
+    for(int i=0;i<256;i++)
+    {
+        if(buffer[i]>=1)
+        {
+            printf("%c",i);
+        }
+    }
+ 
+    return 0;
+}
