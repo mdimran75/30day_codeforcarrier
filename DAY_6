@@ -1,0 +1,68 @@
+dynamic memoery allocation 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *p,*q=0;
+    p=(int *)malloc(4*sizeof(int));
+    q=p;
+    if(p==NULL)
+    {
+        printf("memory not_alocated");
+    }
+    else
+    {
+        for(int i=0;i<4;i++)
+        {
+            scanf("\n%d",(p+i));
+            
+        }
+        
+         for(int i=0;i<4;i++)
+         {
+             printf("allocated memory is %d\n",*(p+i));
+             
+         }
+        
+    }
+
+    return 0;
+}
+// rellaoc
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int *p,*q=0;
+    p=(int *)malloc(4*sizeof(int));
+    
+    for(int i=0;i<4;i++)
+    {
+        scanf("%d",(p+i));
+        
+    }
+     for(int i=0;i<4;i++)
+    {
+        printf("%d",*(p+i));
+    }
+    
+    q=(int *)realloc(p,5*sizeof(int));
+    
+    printf("\n inside relloc ");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",(q+i));
+        
+    }
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",*(q+i));
+        
+    }
+    
+}
+
+
+
