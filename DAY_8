@@ -1,0 +1,26 @@
+// array of structures 
+
+#include <stdio.h>
+//array of structures 
+struct students 
+{
+    char a[10];
+    int marks;
+    float percentage;
+    
+};
+
+int main()
+{
+    struct students s[2];
+    for(int i=0;i<2;i++)
+    {
+        scanf("%s %d %f",s[i].a,&s[i].marks,&s[i].percentage);
+    }
+    printf("\ndisplaying");
+    for(int i=0;i<2;i++)
+    {
+        printf("\n%s %d % f",s[i].a,s[i].marks,s[i].percentage);
+    }
+    return 0;
+}
