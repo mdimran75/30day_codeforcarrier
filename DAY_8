@@ -24,3 +24,53 @@ int main()
     }
     return 0;
 }
+
+
+
+#include <stdio.h>
+#include <string.h>
+//array of structures 
+struct students 
+{
+    char name[10];
+    int marks;
+    float percentage;
+    
+};
+
+int main()
+{
+    struct students s[2];
+    /*for(int i=0;i<2;i++)
+    {
+        scanf("%s %d %f",s[i].a,&s[i].marks,&s[i].percentage);
+    }
+    printf("\ndisplaying");
+    for(int i=0;i<2;i++)
+    {
+        printf("\n%s %d % f",s[i].a,s[i].marks,s[i].percentage);
+    }
+    return 0;*/
+    s[0].marks=100;
+    strcpy(s[0].name,"riyaz");
+    //s[0].name="riyaz";
+    s[0].percentage=88.5;
+    
+    
+    s[1].marks=50;
+    strcpy(s[1].name,"pasha");
+    s[1].percentage=90.5;
+    
+    //printf("%d",s[0].marks);
+    //printf("\n%s",s[0].name);
+    
+    for(int i=0;i<2;i++)
+    {
+        //printf("%d",i+1);
+        
+        printf("\n%d",s[i].marks);
+        printf("\n%s",s[i].name);
+        printf("\n%f",s[i].percentage);
+    }
+    return 0;
+}
