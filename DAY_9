@@ -1,0 +1,14 @@
+c program to check the system is little or big endian
+
+#include<stdio.h>
+int main()
+{
+int a =0x1;
+char *c=(char *)&a;
+if(c==1)
+printf("LE");
+else
+printf("BE");
+return 0;
+
+
