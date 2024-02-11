@@ -9,3 +9,34 @@ int main()
 
     return 0;
 }
+
+
+C program that uses pointer to pointer to swap two strings:
+
+#include <stdio.h>
+
+void swapStrings(char **str1, char **str2)
+{
+    char *temp = *str1;
+    *str1 = *str2;
+    *str2 = temp;
+}
+
+int main()
+{
+    char *str1 = "Hello";
+    char *str2 = "World";
+
+    printf("Before swapping:\n");
+    printf("str1: %s\n", str1);
+    printf("str2: %s\n", str2);
+
+    swapStrings(&str1, &str2);
+
+    printf("After swapping:\n");
+    printf("str1: %s\n", str1);
+    printf("str2: %s\n", str2);
+
+    return 0;
+}
+
