@@ -1,0 +1,11 @@
+#include <stdio.h>
+// find size of datatype 
+int main()
+{
+    long *p;
+    //int a=0;
+    p++;
+    printf("%d",p);
+
+    return 0;
+}
