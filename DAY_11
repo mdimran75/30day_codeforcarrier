@@ -34,3 +34,56 @@ int main()
     
     
 }
+
+//c program to count vowels in a string 
+sample input = hii hello how are you ;
+olp= 1 2 2 1 ;
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[100];
+    printf("enter string ");
+    scanf("%[^\n]s",s);// (or) gets(s);
+    int len = strlen(s);
+    int count[5]={0};
+    for(int i=0;i<len;i++)
+    {
+        switch(s[i])
+        {
+            case 'a':
+            case 'A':
+            count[0]++;
+            break;
+            
+            case 'e':
+            case 'E':
+            count[1]++;
+            break;
+            
+            case 'i':
+            case 'I':
+            count[2]++;
+            break;
+            
+            case 'o':
+            case 'O':
+            count[3]++;
+            break;
+            
+            case 'U':
+            case 'u':
+            count[4]++;
+            break;
+            
+            
+        }
+    }
+    for(int i=0;i<5;i++)
+    {
+        printf("%d\t",count[i]);
+    }
+    
+}
+
+
