@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+// string palindrome using pointers
+int main()
+{
+    char s[]="radar";
+    int flag=0;
+    char *p,*q;
+    int len=strlen(s);
+    p=s;
+    q=s+len-1;
+    for(int i=0;i<len;i++)
+    {
+        if(*p!=*q)
+        {
+          flag=1;
+          break;
+        }
+        
+      p++;
+      q--;
+    }
+    
+    if(flag==1)
+    {
+        printf("not palindrome");
+    }
+    if(flag==0)
+    {
+        printf("palindrome");
+    }
+    
+    return 0;
+    
+    
+}
