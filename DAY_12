@@ -1,0 +1,27 @@
+//design a function that determines if two pointers points two same array //
+
+#include <stdio.h>
+int func(int *p,int*q);
+
+int main()
+{
+   int a[]={1,2,3,4};
+   int *p=&a[1];
+   int *q=&a[3];
+   func(p,q);
+   
+    
+}
+int func(int *p,int*q)
+{
+    p++;
+    q--;
+    if(p==q)
+    {
+        printf("true");
+    }
+    else
+    {
+        printf("false");
+    }
+}
