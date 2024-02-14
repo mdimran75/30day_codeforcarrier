@@ -18,5 +18,19 @@ int main()
     return 0;
 }
 
+#include<stdio.h>
+//c program to convert string to integer representation without using any built in function
+int main()
+{
+    char c[] ="1234";
+    int result=0;
+    for(int i=0;c[i]!='\0';i++)
+    {
+    result=result*10+c[i]-'0'; //taking the charcater and doing sub with charcter 0(zer0)
+                               // doing sub with charcter 0(zero ) will give that differnee only 
+    }
+    printf("%d",result);
+}
+
 
 
