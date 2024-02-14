@@ -1,0 +1,22 @@
+// print duplicate charcter from the string 
+#include <stdio.h>
+
+int main()
+{
+    char s[]="apple";
+    int buffer[256]={0};
+    for(int i=0;s[i]!='\0';i++)
+    {
+        buffer[s[i]]++;
+    }
+    for(int i=0;i<256;i++)
+    {
+        if(buffer[i]>1)
+        printf("%c",i);
+    }
+
+    return 0;
+}
+
+
+
