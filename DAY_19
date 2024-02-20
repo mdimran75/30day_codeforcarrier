@@ -1,0 +1,23 @@
+max of three and four numbers 
+#include <stdio.h>
+#define max(a,b,c) ((a>b && a>c)?a:((b>a && b>c)? b:c))
+int main()
+{
+    int a=10,b=40,c=25;
+    int result = max(a,b,c);
+    printf("%d",result);
+
+    return 0;
+}
+
+int main()
+{
+    int a=105,b=1010,c=20;
+    int max=a;
+    if(b>max)
+    max=b;
+    if(c>max)
+    max=c;
+   
+    printf("%d",max);
+}
