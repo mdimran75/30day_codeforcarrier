@@ -1,3 +1,24 @@
+
+
+#include <stdio.h>
+//c program to swap two bits //
+int main()
+{
+    int num=35;
+    int b1=6;
+    int b2=0;
+    int b1_value=(num>>1)&1;
+    int b2_value=(num>>1)&1;
+    
+    int result= num^((1<<b1)|(1<<b2));
+    printf("%d",result);
+
+    return 0;
+}
+
+
+
+
 #include <stdio.h>
 
 int main() {
