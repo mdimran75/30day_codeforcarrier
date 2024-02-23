@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+union endian_converter
+{
+    unsigned int num;
+    unsigned char bytes[4];
+};
+
+/*int converter_function(unsigned int lenum)
+{
+    union endian_converter converting;
+    converting.num=lenum;
+    int result;
+    result=result|converting.bytes[3]<<24;
+    result=result|converting.bytes[2]<<16;
+    result=result|converting.bytes[1]<<8;
+    result=result|converting.bytes[0];
+    return result;
+}*/
+int converter_function(unsigned int lenum)
+{
+    union endian_converter converting;
+    converting.num = lenum;
+    int result = 0;
+    result = result | converting.bytes[3] << 24;
+    result = result | converting.bytes[2] << 16;
+    result = result | converting.bytes[1] << 8;
+    result = result | converting.bytes[0];
+    return result;
+}
+
+
+
+int main()
+{
+    int num=0x78654321;
+    int bigendian=converter_function(num);
+    printf("Big Endian:    0x%08X\n", bigendian);
+
+    return 0;
+}
