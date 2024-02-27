@@ -1,0 +1,17 @@
+//count no of ones in a interger 
+#include <stdio.h>
+
+int main()
+{
+   int a=15;
+   int c=0;
+   while(a)
+   {
+      
+       c++;
+      a=(a&(a-1));
+       
+   }
+     printf("%d",c);
+    return 0;
+}
