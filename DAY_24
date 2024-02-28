@@ -1,0 +1,23 @@
+#include <stdio.h>
+struct sys
+{
+    
+};
+int main()
+{
+    struct sys s1;
+    printf("%d",sizeof(s1));
+}
+
+
+
+#include <stdio.h>
+ 
+int main()
+{
+    int data=0x12345698;
+    char *p=&data;
+    printf("%x\n",*p);
+ 
+    return 0;
+}
