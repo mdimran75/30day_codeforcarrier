@@ -1,1 +1,43 @@
-//leet code problem//
+/*Leet Code Problem:
+Given an integer array nums sorted in non-decreasing order, return an array of the
+squares of each number sorted in non-decreasing order.
+Example:
+Input: nums = [-4,-1,0,3,10]
+Output: [0,1,9,16,100]
+Explanation: After squaring, the array becomes [16,1,0,9,100].
+After sorting, it becomes [0,1,9,16,100].
+*/
+
+
+#include <stdio.h>
+squareofarray(int *a,int size);
+
+int main()
+{
+     int a[]={-4,-1,0,3,10};
+     squareofarray(a,sizeof(a)/sizeof(a[0]));
+     
+    return 0;
+}
+
+squareofarray(int *a,int size)
+{
+    int t=0;
+    for(int i=0;i<size;i++)
+    {
+        a[i]=a[i]*a[i];
+    }
+    for(int i=0;i<size;i++)
+    {
+        for(int j=i+1;j<size;j++)
+        {
+            if(a[i]>a[j])
+            {
+                t=a[i];
+                a[i]=a[j];
+                a[j]=t;
+            }
+        }
+        printf("\t%d",a[i]);
+    }
+}
