@@ -1,0 +1,41 @@
+/*insering array elemrnts*/
+#include<stdio.h>
+int main()
+{
+    /* insert the elemnt at 5 positioon*/
+    
+    int size=0;
+    printf("enter size of array");
+    scanf("%d",&size);
+    int a[size];
+    for(int i=0;i<size;i++)
+    {
+        a[i]=i;
+        
+    }
+    /* insert the elemnt at 5 positioon*/
+    for(int i=size;i>5;i--)
+    {
+        a[i+1]=a[i];
+    }
+    a[5]=20;
+    size++;
+    for(int i=0;i<size;i++)
+    {
+        printf("\n%d",a[i]);
+    }
+    
+    /*insert element at begning of the array*/
+    
+    a[0]=99;
+    size++;
+    
+    for(int i=0;i<size;i++)
+    {
+        printf("\n new array ois %d",a[i]);
+    }    
+    
+    
+    
+    
+}
