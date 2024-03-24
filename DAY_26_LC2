@@ -1,0 +1,35 @@
+/*Leet code problem:
+Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.
+Example:
+Input: arr = {1,0,2,3,0,4,5,0}
+Output: {1,0,0,2,3,0,0,4}
+*/
+
+
+/*Inside this loop, it shifts each element to the right by assigning arr[j] the value of arr[j-1].
+
+  After shifting the elements, it increments i by 1 to skip the duplicated zero*/
+  
+#include<stdio.h>
+int main()
+{
+    int a[]={1,0,2,3,0,4,5,0};
+    int size=8;
+    for(int i=0;i<size;i++)
+    {
+        if(a[i]==0)
+        {
+            for(int j=size-1;j>i;j--)
+            {
+                a[j]=a[j-1];
+            }
+        i++;
+        }
+        
+        
+    }
+    for(int i=0;i<size;i++)
+    {
+        printf("%d",a[i]);
+    }
+}
