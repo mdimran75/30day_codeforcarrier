@@ -17,3 +17,30 @@ int main()
     return 0;
 }
 
+#include <stdio.h>
+ //setting a bit //
+int main()
+{
+   int num=8;
+   // set 1th position bit //
+   // seting we use or operator (num |(1<< bit position))//
+   int result = num | (1<<2);
+   printf("%d",result); // 12//
+  // clearing a bit //
+  /* for clearing a bit we using and operator with "~" (num & ~(1<<bit_positiomn))*/
+   result = num & (~(1<<2));
+   printf(" \nafter clearing 2nd bit  :%d",result);
+   //toggle a bit b using xor operstor//
+   //num ^ (1<<bit_positiomn)//
+   int n=15;
+   // toggleing 2nd bit//
+   printf("\ntoggleing 2nd bit:%d",n^(1<<2));
+   //checking bits we use & num &(1<<bit_positiomn)
+   int new=10;
+   new=new&(1<<1);
+   printf("\n%d",new);
+    
+    return 0;
+   
+   
+}
