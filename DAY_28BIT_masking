@@ -1,1 +1,19 @@
+/* find the nth bit from a interger */
+#include <stdio.h>
+
+int main()
+{
+    int num=12;
+    int n=5;//need to find 5th bit of an 32 bit interger using masking//
+    int mask =1;
+    mask = (mask<<4);
+  if(num & mask)
+     printf("1");
+  else
+    printf("0");
+    
+    
+
+    return 0;
+}
 
